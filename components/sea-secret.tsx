@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { ArrowDown, ArrowRight, CalendarDays, Check, ChevronDown, Clock3, Leaf, MapPin, Phone, Sparkles, Star, Utensils, Waves } from 'lucide-react'
 import { MenuGallery } from '@/components/menu-gallery'
 import { ReservationForm } from '@/components/reservation-form'
@@ -11,13 +10,13 @@ const dishes = {
   'From the Coast': [['Fish Curry', 'Daily catch, raw mango, coconut milk', '₹625'], ['Pomfret Fry', 'Ajwain, lime, crisp coastal marinade', '₹895'], ['Surmai Tawa Fry', 'Iron tawa, pepper, garlic, curry leaf', '₹775'], ['Squid Fry', 'Tender squid, fennel, green chilli', '₹645']],
   'The Table': [['Neer Dosa', 'Soft rice crepes, coconut chutney', '₹225'], ['Appam', 'Lacy rice hoppers, palm jaggery', '₹245'], ['Malabar Parotta', 'Layered, flaky, hand-rolled', '₹195'], ['Coastal Rice Bowl', 'Steamed rice, pickle, seasonal sides', '₹325']],
 }
+const menuItems = Object.values(dishes).flat() as [string, string, string][]
 const reviews = [['Ananya Rao', 'The freshest seafood and the warmest service. A true Mangalore gem.', '2 weeks ago'], ['Rahul Menon', 'The sunset table, the crab masala, the stories — everything felt special.', '1 month ago'], ['Priya Shah', 'A beautiful, soulful dining experience. We are already planning our next visit.', '3 months ago']]
 
 function LeafCorners({ dark = false }: { dark?: boolean }) { return <><Leaf aria-hidden="true" className={`corner-leaf corner-leaf-left ${dark ? 'text-sand/30' : 'text-palm/20'}`} /><Leaf aria-hidden="true" className={`corner-leaf corner-leaf-right ${dark ? 'text-sand/30' : 'text-palm/20'}`} /></> }
 function SectionIntro({ eyebrow, title, copy }: { eyebrow: string; title: string; copy: string }) { return <div className="section-intro"><p className="eyebrow"><span />{eyebrow}</p><h2>{title}</h2><p className="section-copy">{copy}</p></div> }
 
 export function SeaSecret() {
-  const [category, setCategory] = useState<keyof typeof dishes>('Signatures')
   return <main className="sea-secret" id="top"><SiteHeader />
     <section id="home" className="hero"><div className="hero-image" /><div className="hero-wash" /><div className="hero-content"><p className="eyebrow light"><span />A table by the Arabian Sea</p><h1>Where the<br /><em>tide</em> meets the table.</h1><p className="hero-copy">South Indian coastal cooking, carried by the sea breeze and served with the warmth of home.</p><div className="hero-actions"><a className="button button-gold" href="#menu">Explore the menu <ArrowRight size={17} /></a><a className="button button-ghost" href="#contact">Reserve a table <CalendarDays size={16} /></a></div></div><a className="scroll-cue" href="#offer"><span>Scroll to wander</span><ArrowDown size={17} /></a><div className="hero-stamp"><Waves size={16} /><span>Fresh from<br />the coast</span></div></section>
 
@@ -25,7 +24,7 @@ export function SeaSecret() {
 
     <section id="about-teaser" className="section story-section"><LeafCorners /><div className="story-grid"><div className="story-image-wrap"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="A richly spiced coastal seafood dish" /><span className="image-caption">A taste of the shore</span></div><div className="story-copy"><SectionIntro eyebrow="The SeaSecret story" title="A little salt. A lot of soul." copy="Born on the shores of Mangalore, SeaSecret is a love letter to the coast — its fishing boats at dawn, its kitchens fragrant with coconut and spice, and its tables always set for one more." /><p>For over 37 years, our family has followed the rhythm of the tide. We source our catch each morning, grind our masalas by hand, and cook with the patience that good food deserves.</p><a className="text-link" href="/about">Our story <ArrowRight size={16} /></a></div></div><div className="stats"><div><strong>37<span>+</span></strong><small>Years by the sea</small></div><div><strong>01</strong><small>Daily catch, never frozen</small></div><div><strong>03</strong><small>Generations of recipes</small></div><div><strong>∞</strong><small>Stories around the table</small></div></div></section>
 
-    <section id="menu" className="section menu-section"><div className="menu-heading"><SectionIntro eyebrow="From our kitchen" title="The catch of the day." copy="Recipes rooted in coastal Karnataka, made with what the sea gives us and a little magic from the kitchen." /><span className="menu-mark"><Utensils size={26} /><small>Since<br />1987</small></span></div><div className="menu-tabs" role="tablist">{Object.keys(dishes).map((item) => <button key={item} className={category === item ? 'active' : ''} onClick={() => setCategory(item as keyof typeof dishes)} role="tab" aria-selected={category === item}>{item}</button>)}</div><div className="dish-grid">{dishes[category].map(([name, description, price]) => <article className="dish-card" key={name}><div><h3>{name}</h3><p>{description}</p></div><strong>{price}</strong><ArrowRight className="dish-arrow" size={18} /></article>)}</div><p className="menu-note"><Sparkles size={15} /> Our menu follows the tide. Please ask your server about today&apos;s catch.</p><MenuGallery /></section>
+    <section id="menu" className="section menu-section"><div className="menu-heading"><SectionIntro eyebrow="From our kitchen" title="The catch of the day." copy="Recipes rooted in coastal Karnataka, made with what the sea gives us and a little magic from the kitchen." /><span className="menu-mark"><Utensils size={26} /><small>Since<br />1987</small></span></div><div className="dish-grid">{menuItems.map(([name, description, price]) => <article className="dish-card" key={name}><div><h3>{name}</h3><p>{description}</p></div><strong>{price}</strong><ArrowRight className="dish-arrow" size={18} /></article>)}</div><p className="menu-note"><Sparkles size={15} /> Our menu follows the tide. Please ask your server about today&apos;s catch.</p><MenuGallery /></section>
 
     <section id="events" className="event-section"><div className="event-image" /><div className="event-content"><p className="eyebrow light"><span />Gather by the water</p><h2>Make a memory<br /><em>worth keeping.</em></h2><p>From sunset proposals to long-table celebrations, our private dining spaces are made for the moments that matter.</p><a className="button button-cream" href="/contact">Plan your evening <ArrowRight size={17} /></a><div className="event-list"><span><Check size={14} /> Sunset tables</span><span><Check size={14} /> Private dining</span><span><Check size={14} /> Bespoke menus</span></div></div></section>
 
@@ -33,7 +32,34 @@ export function SeaSecret() {
 
     <section className="reviews-section section"><SectionIntro eyebrow="Loved by the coast" title="Good food travels." copy="A few words from guests who have found their way to our table." /><div className="review-grid">{reviews.map(([name, copy, date]) => <article className="review-card" key={name}><div className="review-top"><span className="google-mark">G</span><span className="stars">{[1,2,3,4,5].map((star) => <Star key={star} size={13} fill="currentColor" />)}</span></div><p>“{copy}”</p><footer><strong>{name}</strong><small>{date} · Google Review</small></footer></article>)}</div></section>
 
-    <section id="gallery" className="section gallery-section"><SectionIntro eyebrow="A sense of place" title="Come as you are. Stay for the sunset." copy="A glimpse into the little world we have made beside the sea." /><div className="gallery-grid">{['https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85','https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85','https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=85','https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=85','https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85','https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85'].map((src, index) => <figure className={`gallery-item gallery-${index + 1}`} key={src}><img src={src} alt="SeaSecret coastal dining" loading="lazy" /></figure>)}</div></section>
+<section id="gallery" className="section gallery-section">
+  <SectionIntro
+    eyebrow="A sense of place"
+    title="Fresh flavours. Warm moments."
+    copy="Explore the vibrant interiors, signature seafood delicacies"
+  />
 
+  <div className="gallery-grid">
+    {[
+      "/gallery/a.avif",
+      "/gallery/b.avif",
+      "/gallery/c.avif",
+      "/gallery/d.avif",
+      "/gallery/e.avif",
+      "/gallery/f.avif",
+    ].map((src, index) => (
+      <figure
+        className={`gallery-item gallery-${index + 1}`}
+        key={src}
+      >
+        <img
+          src={src}
+          alt={`Sea Secret Gallery ${index + 1}`}
+          loading="lazy"
+        />
+      </figure>
+    ))}
+  </div>
+</section>
     <SiteFooter /></main>
 }
