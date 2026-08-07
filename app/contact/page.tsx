@@ -60,6 +60,20 @@ export default function ContactPage() {
               </p>
 
               <p>
+                <Phone size={18} />
+                <span>
+                  <a href="tel:+919822748198">+91 98227 48198</a>
+                </span>
+              </p>
+
+              <p>
+                <Mail size={18} />
+                <span>
+                  <a href="mailto:theseasecretdeccan@gmail.com">theseasecretdeccan@gmail.com</a>
+                </span>
+              </p>
+
+              <p>
                 <MapPin size={18} />
                 <span>
                   <strong>NIBM Outlet</strong>
@@ -79,9 +93,14 @@ export default function ContactPage() {
               <p>
                 <Phone size={18} />
                 <span>
-                  <a href="tel:+918242411987">+91 82424 11987</a>
-                  <br />
-                  <a href="mailto:hello@seasecret.in">hello@seasecret.in</a>
+                  <a href="tel:+918530141444">+91 85301 41444</a>
+                </span>
+              </p>
+
+              <p>
+                <Mail size={18} />
+                <span>
+                  <a href="mailto:theseasecretnibm@gmail.com">theseasecretnibm@gmail.com</a>
                 </span>
               </p>
 
@@ -94,7 +113,6 @@ export default function ContactPage() {
                 </span>
               </p>
             </div>
-            <WhatsAppButton />
           </div>
           <div className="contact-form-wrap">
             <div className="card-top">
@@ -140,6 +158,7 @@ export default function ContactPage() {
       Get Directions
       <ArrowRight size={16} />
     </a>
+    <WhatsAppButton outlet="deccan" label="Chat on WhatsApp" />
   </div>
 
   <div className="map-copy">
@@ -164,6 +183,7 @@ export default function ContactPage() {
       Get Directions
       <ArrowRight size={16} />
     </a>
+    <WhatsAppButton outlet="nibm" label="Chat on WhatsApp" />
   </div>
         </div>
       </section>
@@ -190,7 +210,7 @@ export default function ContactPage() {
               <h3>Can you host celebrations?</h3>
               <p>
                 Absolutely. Tell us what you are planning and we can arrange a
-                private corner, a set menu, or a sunset table.
+                private corner, a set menu.
               </p>
             </div>
             <div>
@@ -204,8 +224,8 @@ export default function ContactPage() {
             <div>
               <h3>Is parking available?</h3>
               <p>
-                There is parking near the restaurant and easy access from
-                Panambur Beach Road.
+                There is parking near the restaurant and easy access 
+                
               </p>
             </div>
           </div>

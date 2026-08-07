@@ -417,7 +417,88 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
 .contact-form-wrap input:focus, .contact-form-wrap select:focus, .contact-form-wrap textarea:focus { border-color: var(--sea); }
 .contact-form-wrap .success-message .button { margin-top: 1.5rem; }
 .visit-section { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 5rem; }
-.map-panel { min-height: 370px; display: flex; align-items: flex-end; gap: 1.5rem; padding: 2rem; border-radius: 1.5rem; background: linear-gradient(135deg, rgb(11 95 165 / 78%), rgb(6 52 79 / 82%)), url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=85') center / cover; }
+/* ==========================
+   Visit Section
+========================== */
+
+.visit-section{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:5rem;
+  align-items:center;
+}
+
+.map-panel{
+  min-height:370px;
+  display:flex;
+  align-items:flex-end;
+  gap:24px;
+  padding:2rem;
+  border-radius:24px;
+
+  background:
+    linear-gradient(135deg,rgba(11,95,165,.78),rgba(6,52,79,.82)),
+    url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.map-copy{
+  flex:1;
+  padding:1.5rem;
+  border-radius:20px;
+  background:rgba(255,248,236,.95);
+  color:var(--ocean);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.map-copy svg{
+  color:var(--sea);
+}
+
+.map-copy p{
+  margin:1rem 0;
+  line-height:1.7;
+}
+
+.map-copy .text-link{
+  margin-bottom:1rem;
+}
+
+.map-copy .whatsapp-button{
+  width:100%;
+  justify-content:center;
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:760px){
+
+  .visit-section{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  .map-panel{
+    min-height:auto;
+    flex-direction:column;
+    align-items:stretch;
+    padding:1rem;
+    gap:1rem;
+  }
+
+  .map-copy{
+    width:100%;
+    padding:1.25rem;
+  }
+
+  .map-copy .whatsapp-button{
+    width:100%;
+    justify-content:center;
+  }
+
+}
 .map-copy { flex: 1; min-width: 0; padding: 1.4rem; border-radius: 1rem; background: rgb(255 248 236 / 94%); color: var(--ocean); }
 .map-copy > svg { color: var(--sea); }
 .map-copy p { margin: .8rem 0 1rem; font-size: .8rem; line-height: 1.6; }
@@ -471,6 +552,39 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
 .whatsapp-mark { display: grid; width: 1.4rem; height: 1.4rem; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: .48rem; }
 .floating-whatsapp { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 30; display: grid; width: 3.1rem; height: 3.1rem; place-items: center; border-radius: 50%; background: #1f8d55; color: var(--cream); box-shadow: 0 10px 25px rgb(6 52 79 / 24%); transition: transform .25s; }
 .floating-whatsapp:hover { transform: translateY(-3px) scale(1.04); }
+/* Floating WhatsApp Dropdown */
+.floating-whatsapp-dropdown{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+}
+
+.floating-whatsapp-dropdown .social-menu{
+    position: absolute;
+    right: 85px;          /* button chya left la open hoil */
+    bottom: 0;
+    left: auto;
+    transform: none;
+    margin: 0;
+    min-width: 220px;
+}
+
+.floating-whatsapp-dropdown .social-menu::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;         /* invisible hover bridge */
+    width: 20px;
+    height: 100%;
+}
+
+/* Hover */
+.floating-whatsapp-dropdown:hover .social-menu{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 .lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 2rem; background: rgb(6 52 79 / 92%); }
 .lightbox img { max-width: min(900px, 92vw); max-height: 78vh; border-radius: 1rem; object-fit: contain; }
 .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; display: grid; width: 2.6rem; height: 2.6rem; place-items: center; border: 1px solid rgb(255 248 236 / 35%); border-radius: 50%; background: transparent; color: var(--cream); }
