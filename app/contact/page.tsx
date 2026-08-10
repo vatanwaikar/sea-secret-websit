@@ -82,8 +82,6 @@ export default function ContactPage() {
                   <br />
                   Royale Heritage Mall,
                   <br />
-                  Above Irani Cafe NIBM,
-                  <br />
                   Mohammed Wadi,
                   <br />
                   Pune - 411060
