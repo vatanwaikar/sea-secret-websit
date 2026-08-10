@@ -107,7 +107,7 @@ export default function ContactPage() {
                 <span>
                   <strong>Open Daily</strong>
                   <br />
-                  12:00 PM – 11:30 PM
+                  11:45 AM – 11:45 PM
                 </span>
               </p>
             </div>

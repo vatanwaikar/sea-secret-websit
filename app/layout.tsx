@@ -15,10 +15,86 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'SeaSecret | Coastal Dining by the Arabian Sea',
+  metadataBase: new URL('https://theseasecret.in'),
+
+  title: {
+    default: 'Sea Secret | Premium Seafood Restaurant in Pune',
+    template: '%s | Sea Secret',
+  },
+
   description:
-    'South Indian coastal cooking, fresh from the shore and served with warmth at SeaSecret, Mangalore.',
-  generator: 'v0.app',
+    'Experience authentic coastal seafood at Sea Secret, Pune. Enjoy fresh seafood, signature coastal dishes, elegant ambience, and unforgettable dining. Reserve your table today.',
+
+  keywords: [
+    'Sea Secret',
+    'Sea Secret Pune',
+    'Seafood Restaurant Pune',
+    'Best Seafood Restaurant Pune',
+    'Sea Food Restaurant',
+    'Coastal Cuisine',
+    'South Indian Seafood',
+    'Fresh Fish',
+    'Crab',
+    'Prawns',
+    'Family Restaurant Pune',
+    'Fine Dining Pune',
+    'Seafood',
+    'Restaurant',
+  ],
+
+  applicationName: 'Sea Secret',
+  authors: [{ name: 'Sea Secret' }],
+  creator: 'Sea Secret',
+  publisher: 'Sea Secret',
+
+  alternates: {
+    canonical: 'https://theseasecret.in',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://theseasecret.in',
+    siteName: 'Sea Secret',
+    title: 'Sea Secret | Premium Seafood Restaurant in Pune',
+    description:
+      'Experience authentic coastal seafood with signature dishes, elegant ambience, and unforgettable dining at Sea Secret.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sea Secret Restaurant',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sea Secret | Premium Seafood Restaurant in Pune',
+    description:
+      'Fresh coastal seafood, signature dishes, and an unforgettable dining experience.',
+    images: ['/og-image.jpg'],
+  },
+
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+
+  category: 'restaurant',
 }
 
 export const viewport: Viewport = {
