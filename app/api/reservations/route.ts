@@ -4,11 +4,11 @@ import nodemailer from 'nodemailer'
 const outletData = {
   deccan: {
     label: 'JM Road Outlet',
-    email: 'theseasecretdeccan@gmail.com',
+    email: process.env.JM_OUTLET_EMAIL!,
   },
   nibm: {
     label: 'NIBM Outlet',
-    email: 'theseasecretnibm@gmail.com',
+    email: process.env.NIBM_OUTLET_EMAIL!,
   },
 }
 
@@ -84,11 +84,11 @@ const outletInfo = outletData[outlet]
     const transport = await createTransport()
 
     await transport.sendMail({
-      from: `SeaSecret Reservations <${process.env.EMAIL_USER}>`,
-      to: outletInfo.email,
-      subject,
-      text: message,
-    })
+  from: `"Sea Secret Website" <${process.env.EMAIL_USER}>`,
+  to: outletInfo.email,
+  subject,
+  text: message,
+})
 
     return NextResponse.json({ success: true })
   } catch (error) {
