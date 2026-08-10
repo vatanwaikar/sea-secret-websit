@@ -31,7 +31,7 @@ export function SiteHeader() {
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="brand" href="/" onClick={() => setOpen(false)}>
           <Image
-            src="/seasecretlogo.png"
+            src="/logo.png"
             alt="Sea Secret"
             width={170}
             height={60}
@@ -98,7 +98,7 @@ export function SiteFooter() {
           <div className="footer-intro">
             <a className="brand footer-brand" href="/">
               <Image
-                src="/seasecretlogo.png"
+                src="/logo.png"
                 alt="Sea Secret"
                 width={170}
                 height={60}

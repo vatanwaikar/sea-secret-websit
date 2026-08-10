@@ -110,6 +110,38 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {children}
+        
+        <Script
+  id="restaurant-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      name: "Sea Secret",
+      url: "https://theseasecret.in",
+      image: "https://theseasecret.in/logo.png",
+      telephone: "+91 9822748198",
+      email: "theseasecretdeccan@gmail.com",
+      servesCuisine: [
+        "Seafood",
+        "South Indian",
+        "Mangalorean",
+        "Coastal"
+      ],
+      acceptsReservations: true,
+      menu: "https://theseasecret.in/#menu",
+      openingHours: "Mo-Su 11:45-23:45",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "R Deccan Mall, 1st Floor, Jangali Maharaj Road, Deccan Gymkhana",
+        addressLocality: "Pune",
+        postalCode: "411004",
+        addressCountry: "IN"
+      }
+    })
+  }}
+/>
 
         {/* Google Analytics */}
         <Script
