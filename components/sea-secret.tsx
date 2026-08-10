@@ -110,7 +110,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
         <div className="event-grid">
           <article className="event-card event-card-previous">
             <div className="event-card-media">
-              <img src="/gallery/d.avif" alt="Vishu celebration at Sea Secret" loading="lazy" />
+              <img src="/vishusadhya/vishu.jpg" alt="Vishu celebration at Sea Secret" loading="lazy" />
               <span className="event-pill">Previous Event</span>
             </div>
             <div className="event-card-body">
@@ -119,14 +119,14 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
               <p>Celebrated with coastal spice-laden feasts, bright floral decor, and a lively dining experience that brought families together.</p>
               <div className="event-details">
                 <span>Completed</span>
-                <span>April 2024</span>
+                <span>April 2026</span>
               </div>
             </div>
           </article>
 
           <article className="event-card event-card-upcoming">
             <div className="event-card-media">
-              <img src="/gallery/f.avif" alt="Upcoming Onam event at Sea Secret" loading="lazy" />
+              <img src="/onam/onnam.jpg" alt="Upcoming Onam event at Sea Secret" loading="lazy" />
               <span className="event-pill event-pill-accent">Upcoming Event</span>
             </div>
             <div className="event-card-body">
@@ -135,7 +135,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
               <p>Experience a lavish coastal Onam spread, traditional sweets, and a festive atmosphere curated to celebrate the season in style.</p>
               <div className="event-details">
                 <span>Scheduled</span>
-                <span>August 2024</span>
+                <span>August 2026</span>
               </div>
             </div>
           </article>
@@ -145,7 +145,61 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
       </div>
     </section>
 
-    <section className="founders-section section"><div className="founders-heading"><p className="eyebrow"><span />The people behind the plate</p><h2>Recipes are<br /><em>family stories.</em></h2><p className="section-copy">Meet the second generation carrying our coastal kitchen forward, one shared table at a time.</p></div><div className="founder-grid"><article className="founder-card"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85" alt="SeaSecret founder in the kitchen" /><div><small>FOUNDER · KITCHEN</small><h3>Arjun Shetty</h3><p>“The best ingredient has always been time.”</p></div></article><article className="founder-card"><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=900&q=85" alt="SeaSecret founder welcoming guests" /><div><small>FOUNDER · TABLE</small><h3>Meera Shetty</h3><p>“Every guest should leave with a story.”</p></div></article></div></section>
+<section className="founders-section section">
+  <div className="founders-heading">
+    <p className="eyebrow">
+      <span />Meet the Visionaries
+    </p>
+
+    <h2>
+      The people behind
+      <br />
+      <em>Sea Secret.</em>
+    </h2>
+
+    <p className="section-copy">
+      Meet the passionate founders whose vision, dedication and love for
+      authentic coastal cuisine have made Sea Secret one of Pune's favourite
+      seafood destinations.
+    </p>
+  </div>
+
+  <div className="founder-grid">
+    <article className="founder-card">
+      <img
+        src="/owner/ronny.jpg"
+        alt="Sea Secret Founder"
+        loading="lazy"
+      />
+
+      <div>
+        <small>FOUNDER</small>
+        <h3>Roney George</h3>
+        <p>
+          "Our goal has always been simple — serve authentic coastal food with
+          exceptional hospitality."
+        </p>
+      </div>
+    </article>
+
+    <article className="founder-card">
+      <img
+        src="/owner/sabu.jpg"
+        alt="Sea Secret Co-Founder"
+        loading="lazy"
+      />
+
+      <div>
+        <small>CO-FOUNDER</small>
+        <h3>Sabu Varghese</h3>
+        <p>
+          "Every guest who walks into Sea Secret should leave with unforgettable
+          memories and authentic flavours."
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
 
     <section className="reviews-section section"><SectionIntro eyebrow="Loved by the coast" title="Good food travels." copy="A few words from guests who have found their way to our table." /><div className="review-grid">{reviews.map(([name, copy, date]) => <article className="review-card" key={name}><div className="review-top"><span className="google-mark">G</span><span className="stars">{[1,2,3,4,5].map((star) => <Star key={star} size={13} fill="currentColor" />)}</span></div><p>“{copy}”</p><footer><strong>{name}</strong><small>{date} · Google Review</small></footer></article>)}</div></section>
 
