@@ -89,10 +89,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
 
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
+  
 
   category: 'restaurant',
 }

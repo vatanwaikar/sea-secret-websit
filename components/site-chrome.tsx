@@ -141,7 +141,14 @@ export function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 SeaSecret</span>
-          <span>Made with love in Pune</span>
+           <a
+    href="https://prosira.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-credit"
+  >
+    Crafted by <strong>Prosira Advertisers</strong>
+  </a>
           <div className="footer-bottom-actions">
             <div className="socials">
               {/* Instagram Dropdown */}

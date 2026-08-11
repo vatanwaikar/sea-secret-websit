@@ -515,32 +515,46 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
    Mobile
 =========================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-  .social-btn{
-    width:46px;
-    height:46px;
+  .social-btn {
+    width: 46px;
+    height: 46px;
   }
 
-  .social-menu{
-    left:auto;
-    right:0;
-    transform:translateY(10px);
-    width:180px;
+  .social-menu {
+    width: 170px;
+    transform: translateY(10px);
   }
+
+  /* Instagram (left icon) */
+  .social-dropdown:first-child .social-menu {
+    left: 0;
+    right: auto;
+  }
+
+  /* Facebook (right icon) */
+  .socials .social-dropdown:nth-child(2) .social-menu {
+  left: auto;
+  right: 0;
+}
 
   .social-dropdown:hover .social-menu,
-  .social-dropdown:focus-within .social-menu{
-    transform:translateY(0);
+  .social-dropdown:focus-within .social-menu {
+    transform: translateY(0);
   }
 
-  .social-menu::before{
-    left:auto;
-    right:20px;
-    transform:rotate(45deg);
+  .social-dropdown:first-child .social-menu::before {
+    left: 22px;
+    right: auto;
   }
 
+ .socials .social-dropdown:nth-child(2) .social-menu::before {
+  left: auto;
+  right: 22px;
 }
+}
+
 .footer-bottom { padding-top: 1.2rem; border-top: 1px solid rgb(255 248 236 / 16%); color: rgb(255 248 236 / 52%); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
 .footer-bottom a { display: flex; align-items: center; gap: .35rem; color: var(--gold); }
 .back-top { transform: rotate(180deg); }
