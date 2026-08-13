@@ -178,14 +178,16 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
 
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100%;
   border-radius: 1.8rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -305,7 +307,10 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
     min-height: auto;
     aspect-ratio: 4 / 5;
   }
-
+.event-pill-crab{
+  background:#d74d37;
+  color:#fff;
+}
   .event-card-media img {
     width: 100%;
     height: 100%;
@@ -351,6 +356,31 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
     font-size: .7rem;
     padding: .5rem .8rem;
   }
+}
+@media (max-width:1100px){
+
+.event-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.event-card:last-child{
+    grid-column:1/-1;
+    max-width:500px;
+    margin:auto;
+}
+
+}
+
+@media (max-width:768px){
+
+.event-grid{
+    grid-template-columns:1fr;
+}
+
+.event-card:last-child{
+    max-width:100%;
+}
+
 }
 
 .gallery-section { padding-bottom: 8rem; }

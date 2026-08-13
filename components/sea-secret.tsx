@@ -146,51 +146,134 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
 
   <MenuGallery />
 </section>
-    <section id="events" className="event-section">
-      <div className="event-panel">
-        <div className="event-panel-copy">
-          <p className="eyebrow light"><span />Gather by the water</p>
-          <h2>Events that feel<br /><em>timeless.</em></h2>
-          <p className="section-copy">From festive celebrations to intimate coastal gatherings, our events are designed to create premium moments that linger long after the last course.</p>
+   <section id="events" className="event-section">
+  <div className="event-panel">
+    <div className="event-panel-copy">
+      <p className="eyebrow light">
+        <span />
+        Gather by the water
+      </p>
+
+      <h2>
+        Events that feel
+        <br />
+        <em>timeless.</em>
+      </h2>
+
+      <p className="section-copy">
+        From festive celebrations to intimate coastal gatherings, our
+        events are designed to create premium moments that linger long
+        after the last course.
+      </p>
+    </div>
+
+    <div className="event-grid">
+
+      {/* Vishu */}
+      <article className="event-card event-card-previous">
+        <div className="event-card-media">
+          <img
+            src="/vishusadhya/vishu.jpg"
+            alt="Vishu celebration at Sea Secret"
+            loading="lazy"
+          />
+
+          <span className="event-pill">
+            Previous Event
+          </span>
         </div>
 
-        <div className="event-grid">
-          <article className="event-card event-card-previous">
-            <div className="event-card-media">
-              <img src="/vishusadhya/vishu.jpg" alt="Vishu celebration at Sea Secret" loading="lazy" />
-              <span className="event-pill">Previous Event</span>
-            </div>
-            <div className="event-card-body">
-              <small>Vishu Festival</small>
-              <h3>Vishu at Sea Secret</h3>
-              <p>Celebrated with coastal spice-laden feasts, bright floral decor, and a lively dining experience that brought families together.</p>
-              <div className="event-details">
-                <span>Completed</span>
-                <span>April 2026</span>
-              </div>
-            </div>
-          </article>
+        <div className="event-card-body">
+          <small>Vishu Festival</small>
 
-          <article className="event-card event-card-upcoming">
-            <div className="event-card-media">
-              <img src="/onam/onam2.jpeg" alt="Upcoming Onam event at Sea Secret" loading="lazy" />
-              <span className="event-pill event-pill-accent">Upcoming Event</span>
-            </div>
-            <div className="event-card-body">
-              <small>Onam Celebration</small>
-              <h3>Onam Feast & Festivity</h3>
-              <p>Experience a lavish coastal Onam spread, traditional sweets, and a festive atmosphere curated to celebrate the season in style.</p>
-              <div className="event-details">
-                <span>Scheduled</span>
-                <span>August 2026</span>
-              </div>
-            </div>
-          </article>
+          <h3>Vishu at Sea Secret</h3>
+
+          <p>
+            Celebrated with coastal spice-laden feasts, bright floral
+            decor, and a lively dining experience that brought families
+            together.
+          </p>
+
+          <div className="event-details">
+            <span>Completed</span>
+            <span>April 2026</span>
+          </div>
+        </div>
+      </article>
+
+      {/* Onam */}
+      <article className="event-card event-card-upcoming">
+        <div className="event-card-media">
+          <img
+            src="/onam/onam2.jpeg"
+            alt="Upcoming Onam event"
+            loading="lazy"
+          />
+
+          <span className="event-pill event-pill-accent">
+            Upcoming Event
+          </span>
         </div>
 
-        <a className="button button-cream" href="/contact">Host your event <ArrowRight size={17} /></a>
-      </div>
-    </section>
+        <div className="event-card-body">
+          <small>Onam Celebration</small>
+
+          <h3>Onam Feast &amp; Festivity</h3>
+
+          <p>
+            Experience a lavish coastal Onam Sadhya, authentic Kerala
+            delicacies, traditional sweets, live music, and festive
+            celebrations crafted for the whole family.
+          </p>
+
+          <div className="event-details">
+            <span>Coming Soon</span>
+            <span>August 2026n</span>
+          </div>
+        </div>
+      </article>
+
+      {/* Crab Festival */}
+      <article className="event-card event-card-crab">
+        <div className="event-card-media">
+          <img
+            src="/crabfestival/crab.jpeg"
+            alt="Crab Festival at Sea Secret"
+            loading="lazy"
+          />
+
+          <span className="event-pill event-pill-crab">
+            Seasonal Festival
+          </span>
+        </div>
+
+        <div className="event-card-body">
+          <small>Crab Festival</small>
+
+          <h3>Ultimate Crab &amp; Prawns Feast</h3>
+
+          <p>
+            Dive into an unforgettable crab & prawn experience featuring fresh
+            mud crabs, chef specials, live
+            grilling, and exclusive seafood platters for every crab
+            lover.
+          </p>
+
+          <div className="event-details">
+            <span>Completed</span>
+            <span>June 2026</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <a className="button button-cream" href="/contact">
+      Host your event
+      <ArrowRight size={17} />
+    </a>
+  </div>
+</section>
 
 <section className="founders-section section">
   <div className="founders-heading">
@@ -214,7 +297,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
   <div className="founder-grid">
     <article className="founder-card">
       <img
-        src="/owner/ronny.jpg"
+        src="/owner/ronny.jpeg"
         alt="Sea Secret Founder"
         loading="lazy"
       />
