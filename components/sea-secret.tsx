@@ -20,7 +20,54 @@ export function SeaSecret() {
   return <main className="sea-secret" id="top"><SiteHeader />
     <section id="home" className="hero"><div className="hero-image" /><div className="hero-wash" /><div className="hero-content"><p className="eyebrow light"><span />Authentic Coastal Dining in Pune</p><h1>Where the<br /><em>tide</em> meets the table.</h1><p className="hero-copy">Fresh seafood, authentic coastal recipes & unforgettable dining experiences at our JM Road and NIBM outlets.</p><div className="hero-actions"><a className="button button-gold" href="#menu">Explore the menu <ArrowRight size={17} /></a><a className="button button-ghost" href="contact">Reserve a table <CalendarDays size={16} /></a></div></div><a className="scroll-cue" href="#offer"><span>Scroll to wander</span><ArrowDown size={17} /></a><div className="hero-stamp"><Waves size={16} /><span>Fresh from<br />the coast</span></div></section>
 
-    <section className="offer-banner"><div><p className="eyebrow light"><span />For the long weekend</p><h2>Sunset seafood<br /><em>for two.</em></h2><p>Reserve a golden-hour table and enjoy a chef&apos;s tasting of today&apos;s catch, with two coastal cocktails.</p></div><a className="button button-gold" href="/contact">Claim the table <ArrowRight size={17} /></a></section>
+    <section className="onam-festival-banner">
+      <div className="onam-banner-content">
+        <div className="onam-sadhya-image">
+          <img src="/onam/onam2.jpeg" alt="Onam Sadhya" style={{ borderRadius: '50%', objectFit: 'cover', width: '150px', height: '150px' }} />
+        </div>
+
+        <div className="onam-banner-text">
+          <p className="onam-eyebrow"><span className="line"></span>UPCOMING EVENT</p>
+          <h2>Onam Festival <em className="onam-year">2026</em></h2>
+          <p className="onam-desc">Celebrate the spirit of Kerala with traditional Sadhya, seafood specials, live music & festive vibes.</p>
+          <p className="onam-availability">AUG 23, 26 & 30 • LIMITED SEATING AVAILABLE</p>
+        </div>
+
+        <div className="onam-banner-features">
+          <div className="feature-item">
+            <Leaf size={24} className="feature-icon" />
+            <span>Authentic<br />Onam Sadhya</span>
+          </div>
+          <div className="feature-divider"></div>
+          <div className="feature-item">
+            <Fish size={24} className="feature-icon" />
+            <span>Seafood<br />Specials</span>
+          </div>
+          <div className="feature-divider"></div>
+          <div className="feature-item">
+            <Music2 size={24} className="feature-icon" />
+            <span>Live Music &<br />Entertainment</span>
+          </div>
+          <div className="feature-divider"></div>
+          <div className="feature-item">
+            <Users size={24} className="feature-icon" />
+            <span>Family Dining<br />Offers</span>
+          </div>
+        </div>
+
+        <div className="onam-banner-badge">
+          <div className="badge-bg">
+            <span className="badge-top">COMING</span>
+            <span className="badge-bottom">SOON</span>
+          </div>
+        </div>
+
+        {/* <div className="onam-banner-actions">
+          <button className="notify-btn">Notify Me <Bell size={16} /></button>
+          <a href="/onam" className="learn-more-link">Learn More <ArrowRight size={16} /></a>
+        </div> */}
+      </div>
+    </section>
 
 <section id="about-teaser" className="section story-section">
   <LeafCorners />

@@ -1037,3 +1037,254 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
 
 }
 /* ---- */
+
+/* Onam Festival Banner */
+.onam-festival-banner {
+  background-color: #fdfaf4;
+  border-top: 2px solid #e5d5b5;
+  border-bottom: 2px solid #e5d5b5;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  container-type: inline-size;
+  container-name: onamBanner;
+  padding: 1.5cqi 2cqi;
+}
+
+.onam-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  gap: 1.5cqi;
+  flex-wrap: nowrap;
+}
+
+.onam-sadhya-image {
+  flex-shrink: 0;
+  width: 14cqi;
+  height: 14cqi;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.onam-sadhya-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0px 1cqi 1.5cqi rgba(0,0,0,0.15));
+}
+
+.onam-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3cqi;
+  max-width: 25cqi;
+  flex-shrink: 0;
+}
+
+.onam-eyebrow {
+  font-size: 0.7cqi;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #cda863;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5cqi;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.onam-eyebrow .line {
+  width: 2cqi;
+  height: 1px;
+  background-color: #cda863;
+}
+
+.onam-banner-text h2 {
+  font-size: 2.5cqi;
+  color: #1a3641;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.onam-year {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #cda863;
+}
+
+.onam-desc {
+  font-size: 0.9cqi;
+  color: #555;
+  margin: 0.3cqi 0;
+  line-height: 1.4;
+}
+
+.onam-availability {
+  font-size: 0.65cqi;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #cda863;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.onam-banner-features {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqi;
+  flex-shrink: 0;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5cqi;
+}
+
+.feature-icon {
+  color: #cda863;
+  width: 2.2cqi;
+  height: 2.2cqi;
+}
+
+.feature-item span {
+  font-size: 0.75cqi;
+  color: #666;
+  line-height: 1.2;
+}
+
+.feature-divider {
+  width: 1px;
+  height: 3.5cqi;
+  background-color: #e5d5b5;
+}
+
+.onam-banner-badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0 4cqi;
+}
+
+/* Elegant Flowers around badge */
+.onam-banner-badge::before,
+.onam-banner-badge::after {
+  content: "";
+  position: absolute;
+  width: 9cqi;
+  height: 9cqi;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0 C60 30, 80 40, 100 50 C80 60, 60 70, 50 100 C40 70, 20 60, 0 50 C20 40, 40 30, 50 0 Z" fill="%23f59e0b" opacity="0.9" /><path d="M50 15 C55 35, 65 45, 85 50 C65 55, 55 65, 50 85 C45 65, 35 55, 15 50 C35 45, 45 35, 50 15 Z" fill="%23d97706" /><circle cx="50" cy="50" r="12" fill="%23b45309" /><path d="M10 20 Q 30 10 50 30 T 90 20" stroke="%234d7c0f" stroke-width="3" fill="none" opacity="0.7"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+.onam-banner-badge::before {
+  left: -5cqi;
+  top: -2cqi;
+  transform: rotate(-25deg);
+}
+.onam-banner-badge::after {
+  right: -5cqi;
+  bottom: -2cqi;
+  transform: rotate(155deg);
+}
+
+.badge-bg {
+  background-color: #0b2239;
+  border: 1px solid #cda863;
+  border-radius: 1cqi;
+  padding: 1.5cqi 2.5cqi;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0.5cqi 1.5cqi rgba(0,0,0,0.2);
+}
+.badge-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0.4cqi;
+  border: 1px dashed #cda863;
+  border-radius: 0.5cqi;
+  pointer-events: none;
+}
+
+.badge-top {
+  font-size: 0.9cqi;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+.badge-bottom {
+  font-size: 2cqi;
+  color: #cda863;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.onam-banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8cqi;
+  flex-shrink: 0;
+}
+
+.notify-btn {
+  background-color: #c8a35e;
+  color: white;
+  border: none;
+  padding: 0.7cqi 1.4cqi;
+  border-radius: 2cqi;
+  font-size: 0.9cqi;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5cqi;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.notify-btn svg {
+  width: 1.2cqi;
+  height: 1.2cqi;
+}
+.notify-btn:hover {
+  background-color: #b28f4d;
+}
+
+.learn-more-link {
+  font-size: 0.9cqi;
+  color: #555;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3cqi;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.learn-more-link svg {
+  width: 1.2cqi;
+  height: 1.2cqi;
+}
+.learn-more-link:hover {
+  color: #cda863;
+}
+
+
