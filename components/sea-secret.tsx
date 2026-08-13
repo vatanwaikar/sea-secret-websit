@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowDown, ArrowRight, CalendarDays, Check, ChevronDown, Clock3, Leaf, MapPin, Phone, Sparkles, Star, Utensils, Waves } from 'lucide-react'
+import { ArrowDown, ArrowRight, CalendarDays, Check, ChevronDown, Clock3, Leaf, MapPin, Phone, Sparkles, Star, Waves,Utensils, Fish, Music2, Users, Bell} from 'lucide-react'
 import { MenuGallery } from '@/components/menu-gallery'
 import { ReservationForm } from '@/components/reservation-form'
 import { SiteFooter, SiteHeader } from '@/components/site-chrome'
@@ -126,7 +126,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
 
           <article className="event-card event-card-upcoming">
             <div className="event-card-media">
-              <img src="/onam/onnam.jpg" alt="Upcoming Onam event at Sea Secret" loading="lazy" />
+              <img src="/onam/onam2.jpeg" alt="Upcoming Onam event at Sea Secret" loading="lazy" />
               <span className="event-pill event-pill-accent">Upcoming Event</span>
             </div>
             <div className="event-card-body">
@@ -184,7 +184,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
 
     <article className="founder-card">
       <img
-        src="/owner/sabu.jpg"
+        src="/owner/sabu.jpeg"
         alt="Sea Secret Co-Founder"
         loading="lazy"
       />
