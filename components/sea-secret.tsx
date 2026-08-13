@@ -250,6 +250,24 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
 
     <section className="reviews-section section"><SectionIntro eyebrow="Loved by the coast" title="Good food travels." copy="A few words from guests who have found their way to our table." /><div className="review-grid">{reviews.map(([name, copy, date]) => <article className="review-card" key={name}><div className="review-top"><span className="google-mark">G</span><span className="stars">{[1,2,3,4,5].map((star) => <Star key={star} size={13} fill="currentColor" />)}</span></div><p>“{copy}”</p><footer><strong>{name}</strong><small>{date} · Google Review</small></footer></article>)}</div></section>
 
+    <section className="testimonial-section section">
+      <SectionIntro eyebrow="Hear from them" title="Guest Stories." copy="Watch our guests share their Sea Secret experience." />
+      <div className="testimonial-video-grid">
+        <div className="testimonial-video-card">
+          <video controls preload="metadata" playsInline>
+            <source src="/testimonalvideo/t1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="testimonial-video-card">
+          <video controls preload="metadata" playsInline>
+            <source src="/testimonalvideo/t2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
 <section id="gallery" className="section gallery-section">
   <SectionIntro
     eyebrow="A sense of place"
