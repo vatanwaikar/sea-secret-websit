@@ -228,7 +228,7 @@ copy="Discover authentic coastal seafood, handcrafted delicacies, signature cock
 
           <div className="event-details">
             <span>Coming Soon</span>
-            <span>August 2026n</span>
+            <span>August 2026</span>
           </div>
         </div>
       </article>
