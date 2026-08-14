@@ -68,17 +68,7 @@ if (
 }
 
 const outletInfo = outletData[outlet]
-console.log("========== RESERVATION DEBUG ==========");
-console.log("Body:", body);
-console.log("Outlet:", outlet);
-console.log("Outlet Info:", outletInfo);
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("JM_OUTLET_EMAIL:", process.env.JM_OUTLET_EMAIL);
-console.log("NIBM_OUTLET_EMAIL:", process.env.NIBM_OUTLET_EMAIL);
 
-if (!outletInfo?.email) {
-  throw new Error("Recipient email is undefined");
-}
     const subject = `SeaSecret reservation request from ${name}`
     const message = [
       `Name: ${name}`,
@@ -96,10 +86,10 @@ if (!outletInfo?.email) {
 
     await transport.sendMail({
   from: `"Sea Secret Website" <${process.env.EMAIL_USER}>`,
-  to: "theseasecretdeccan@gmail.com",
+  to: outletInfo.email,
   subject,
   text: message,
-});
+})
 
     return NextResponse.json({ success: true })
   } catch (error) {
