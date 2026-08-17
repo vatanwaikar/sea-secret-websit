@@ -45,8 +45,8 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            className="nav-reserve"
-            href="/contact"
+           className="nav-reserve"
+            href="/contact#reserve"
             onClick={() => setOpen(false)}
           >
             Reserve a table <ArrowRight size={15} />

@@ -36,6 +36,7 @@ export async function POST(request: Request) {
   phone: string
   email?: string
   date: string
+  time: string
   guests: string | number
   outlet: keyof typeof outletData
   notes?: string
@@ -48,6 +49,7 @@ const {
   phone,
   email,
   date,
+  time,
   guests,
   outlet,
   notes,
@@ -57,6 +59,7 @@ if (
   !name ||
   !phone ||
   !date ||
+  !time ||
   !guests ||
   !outlet ||
   !outletData[outlet]
@@ -76,6 +79,7 @@ const outletInfo = outletData[outlet]
       email ? `Email: ${email}` : undefined,
       `Outlet: ${outletInfo.label}`,
       `Date: ${date}`,
+      `Time Slot: ${time}`,
       `Guests: ${guests}`,
       notes ? `Notes: ${notes}` : undefined,
     ]

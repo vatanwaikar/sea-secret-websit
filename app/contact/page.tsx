@@ -112,7 +112,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <div className="contact-form-wrap">
+          <div className="contact-form-wrap" id="reserve">
             <div className="card-top">
               <span>Reserve your table</span>
               <Waves size={20} />

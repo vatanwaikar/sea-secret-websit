@@ -43,6 +43,14 @@
   --radius: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#reserve {
+  scroll-margin-top: 100px;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--cream); }
 body { margin: 0; background: var(--cream); color: var(--foreground); font-family: var(--font-inter), sans-serif; }
@@ -630,8 +638,12 @@ h1 em, h2 em { color: var(--gold); font-style: italic; }
 .inner-page .site-header { position: absolute; }
 .inner-hero { position: relative; min-height: 620px; display: flex; align-items: flex-end; padding: 8rem 8vw 6rem; color: var(--cream); isolation: isolate; background: center / cover; }
 .about-hero { background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=90'); }
-.contact-hero { background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=2200&q=90'); }
-.inner-hero-wash { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(6 52 79 / 84%), rgb(6 52 79 / 22%)), linear-gradient(0deg, rgb(6 52 79 / 65%), transparent 55%); }
+.contact-hero {
+  background-image: url('/contactus.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}.inner-hero-wash { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(6 52 79 / 84%), rgb(6 52 79 / 22%)), linear-gradient(0deg, rgb(6 52 79 / 65%), transparent 55%); }
 .inner-hero-content { max-width: 680px; animation: rise .8s ease both; }
 .inner-hero-content h1 { margin-bottom: 1.5rem; }
 .inner-hero-content > p:last-child { color: rgb(255 248 236 / 76%); font-family: var(--font-playfair), serif; font-size: 1.2rem; font-style: italic; }
