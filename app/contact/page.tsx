@@ -16,7 +16,7 @@ export default function ContactPage() {
           <h1>
             Let the sea
             <br />
-            <em>set the mood.</em>
+            <em>set the mood</em>
           </h1>
           <p>
             Reservations, celebrations, directions, and everything in between.
