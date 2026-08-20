@@ -31,7 +31,7 @@ export function SiteHeader() {
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="brand" href="/" onClick={() => setOpen(false)}>
           <Image
-            src="/seasecretlogo.png"
+            src="/logo.png"
             alt="Sea Secret"
             width={170}
             height={60}
@@ -45,8 +45,8 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            className="nav-reserve"
-            href="/contact"
+           className="nav-reserve"
+            href="/contact#reserve"
             onClick={() => setOpen(false)}
           >
             Reserve a table <ArrowRight size={15} />
@@ -67,15 +67,29 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <>
-      <a
-        className="floating-whatsapp"
-        href="https://wa.me/918242411987?text=Hello%20SeaSecret%2C%20I%20would%20like%20to%20reserve%20a%20table."
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Reserve on WhatsApp"
-      >
-        <span className="whatsapp-mark">WA</span>
-      </a>
+      <div className="social-dropdown floating-whatsapp-dropdown">
+        <button className="floating-whatsapp" aria-label="WhatsApp">
+          <span className="whatsapp-mark">WA</span>
+        </button>
+
+        <div className="social-menu">
+          <a
+            href="https://wa.me/919822748198?text=Hello%20Sea%20Secret%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20JM%20Road%20Outlet."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📍 JM Road Outlet
+          </a>
+
+          <a
+            href="https://wa.me/918530141444?text=Hello%20Sea%20Secret%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20NIBM%20Outlet."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📍 NIBM Outlet
+          </a>
+        </div>
+      </div>
       <footer className="site-footer">
         <div className="footer-wave" aria-hidden="true">
           <Waves />
@@ -84,7 +98,7 @@ export function SiteFooter() {
           <div className="footer-intro">
             <a className="brand footer-brand" href="/">
               <Image
-                src="/seasecretlogo.png"
+                src="/logo.png"
                 alt="Sea Secret"
                 width={170}
                 height={60}
@@ -108,15 +122,33 @@ export function SiteFooter() {
             <p>
               JM Road Outlet
               <br />
-              NIBM Outlet
+              <a href="tel:+919822748198">+91 98227 48198</a>
+              <br />
+              <a href="mailto:theseasecretdeccan@gmail.com">
+                theseasecretdeccan@gmail.com
+              </a>
             </p>
-            <a href="tel:+918242411987">+91 824 241 1987</a>
-            <a href="mailto:hello@seasecret.in">hello@seasecret.in</a>
+            <p>
+              NIBM Outlet
+              <br />
+              <a href="tel:+918530141444">+91 85301 41444</a>
+              <br />
+              <a href="mailto:theseasecretnibm@gmail.com">
+                theseasecretnibm@gmail.com
+              </a>
+            </p>
           </div>
         </div>
         <div className="footer-bottom">
           <span>© 2026 SeaSecret</span>
-          <span>Made with love in Pune</span>
+           <a
+    href="https://prosira.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-credit"
+  >
+    Crafted by <strong>Prosira Advertisers</strong>
+  </a>
           <div className="footer-bottom-actions">
             <div className="socials">
               {/* Instagram Dropdown */}
